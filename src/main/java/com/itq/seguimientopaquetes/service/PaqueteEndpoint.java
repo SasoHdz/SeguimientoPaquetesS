@@ -19,11 +19,10 @@ public class PaqueteEndpoint {
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "paquete")
 	@ResponsePayload
 
-    public Ack paqueteRegistration(@RequestPayload Paquete request){
+    public Ack insertarPaquete(@RequestPayload Paquete request){
         System.out.println("Llegue a paquete registration");
         Ack response = paqueteService.insertarPaquete(request);
         return response;
     }
-
     
 }

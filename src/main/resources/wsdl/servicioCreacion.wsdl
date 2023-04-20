@@ -21,7 +21,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="crearPaqueteResponse">
-		<wsdl:part name="parameter" type="xs:ack" />
+		<wsdl:part name="parameter" type="tns:ack" />
 	</wsdl:message>
 
 	<wsdl:message name="OperationRequest">
@@ -29,7 +29,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="OperationResponse">
-		<wsdl:part name="parameter" type="xs:ack" />
+		<wsdl:part name="parameter" type="tns:ack" />
 	</wsdl:message>
 
 	<wsdl:portType name="paquetePortType">
@@ -69,7 +69,7 @@
 	</wsdl:binding>
 	<wsdl:service name="RastreoService">
 		<wsdl:port name="RastreoPort" binding="tns:creacionBinding">
-			<soap:address location="http://com.rastreo" />
+			<soap:address location="No target address" />
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>

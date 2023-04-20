@@ -5,15 +5,15 @@
 	<xs:element name="paquete">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="idPaquete" type="xs:string" minOccurs="0"/>
-				<xs:element name="idRemitente" type="xs:string" minOccurs="0" />					
-				<xs:element name="idDestinatario" type="xs:string" minOccurs="0" />
+				<xs:element name="idPaquete" type="xs:string" />
+				<xs:element name="idRemitente" type="xs:string" />
+				<xs:element name="idDestinatario" type="xs:string" />
 				<xs:element name="descripcion" type="xs:string" />
 				<xs:element name="direccionEntrega" type="xs:string" />
-				<xs:element name="fechaEnvio" type="xs:date" minOccurs="0" />
-				<xs:element name="dimensiones" type="xs:decimal" minOccurs="0" />
-				<xs:element name="peso" type="xs:decimal" minOccurs="0"/>
-				<xs:element name="estado" type="xs:string" minOccurs="0"/>
+				<xs:element name="fechaEnvio" type="xs:date" />
+				<xs:element name="dimensiones" type="xs:decimal" />
+				<xs:element name="peso" type="xs:decimal" />
+				<xs:element name="estado" type="xs:string" />
 				<!-- <xs:element name="guiaSeguimiento" type="xs:string" />
 				<xs:element name="costoEnvio" type="xs:decimal" />
 				<xs:element name="metodoEnvio" type="xs:string" /> -->
