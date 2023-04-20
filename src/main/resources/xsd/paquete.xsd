@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xs:element name="paquete">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idPaquete">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[A-Z]{2}[0-9]{9}[A-Z]{2}" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="idRemitente">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[A-Z]{2}[0-9]{9}[A-Z]{2}" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="idDestinatario">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[A-Z]{2}[0-9]{9}[A-Z]{2}" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="descripcion" type="xs:string" />
+				<xs:element name="direccionEntrega" type="direccionEnvioType" />
+				<xs:element name="fechaEnvio" type="xs:date" />
+				<xs:element name="dimensiones" type="xs:decimal" />
+				<xs:element name="peso" type="xs:decimal" />
+				<xs:element name="estado" type="estadoType" />
+				<!-- <xs:element name="guiaSeguimiento" type="xs:string" />
+				<xs:element name="costoEnvio" type="xs:decimal" />
+				<xs:element name="metodoEnvio" type="xs:string" /> -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="idPaquete">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[A-Z]{2}[0-9]{9}[A-Z]{2}" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:complexType name="direccionEnvioType">
+		<xs:sequence>
+			<xs:element name="calle" type="xs:string" />
+			<xs:element name="numeroExterior" type="xs:string" />
+			<xs:element name="numeroInterior" type="xs:string" minOccurs="0" />
+			<xs:element name="colonia" type="xs:string" />
+			<xs:element name="codigoPostal" minOccurs="0" maxOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5" />
+						<xs:minLength value="5" />
+						<xs:pattern value="[0-9]{5}" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="municipio" type="xs:string" />
+			<xs:element name="estado" type="xs:string" />
+			<xs:element name="pais" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="estadoType">
+		<xs:sequence>
+			<xs:element name="descripcion" type="xs:string" />
+			<xs:element name="fechaActualizacion" type="xs:date" />
+			<xs:element name="fechaEstimadaEntrega" type="xs:date" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

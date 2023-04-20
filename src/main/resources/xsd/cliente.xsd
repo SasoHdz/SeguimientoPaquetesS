@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xs:element name="cliente">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="idCliente">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[A-Z]{2}[0-9]{4}" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="nombre" type="xs:string">
+				</xs:element>
+				<xs:element name="apellidoMaterno" type="xs:string">
+				</xs:element>
+				<xs:element name="apellidoPaterno" type="xs:string">
+				</xs:element>
+				<xs:element name="direccion">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="calle" type="xs:string">
+							</xs:element>
+							<xs:element name="numeroInterior" type="xs:int" minOccurs="0">
+							</xs:element>
+							<xs:element name="numeroExterior" type="xs:int">
+							</xs:element>
+							<xs:element name="codigoPostal" type="xs:int">
+							</xs:element>
+							<xs:element name="colonia" type="xs:string">
+							</xs:element>
+							<xs:element name="municipio" type="xs:string">
+							</xs:element>
+							<xs:element name="estado" type="xs:string">
+							</xs:element>
+							<xs:element name="pais" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="email" type="xs:string">
+				</xs:element>
+				<xs:element name="telefono" type="xs:string" />
+				<xs:element name="fechaNac">
+					<xs:complexType>
+						<xs:sequence>
+							<!-- Cambiar por una expresion regular -->
+							<xs:element name="diaNac" type="xs:int">
+							</xs:element>
+							<xs:element name="mesNac" type="xs:int">
+							</xs:element>
+							<xs:element name="yearNac" type="xs:int">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="password" type="xs:string" />
+				<!-- <xs:element name="idPaquete">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[A-Z]{2}[0-9]{4}" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element> -->
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

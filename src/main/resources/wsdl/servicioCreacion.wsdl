@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Aqui va operaciones crearPaquete, CrearSeguimiento -->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tns="http://com.rastreo" targetNamespace="http://com.rastreo">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://com.rastreo" elementFormDefault="qualified">
+			<xs:include schemaLocation="paquete.xsd" />
+			<xs:include schemaLocation="repartidor.xsd" />
+			<xs:include schemaLocation="cliente.xsd" />
+			<!-- Usuarios -->
+		</xs:schema>
+	</wsdl:types>
+
+	<wsdl:message name="crearPaqueteRequest">
+		<wsdl:part name="parameter" element="tns:paquete" />
+	</wsdl:message>
+
+	<wsdl:message name="crearPaqueteResponse">
+		<wsdl:part name="parameter" type="xs:string" />
+	</wsdl:message>
+
+	<wsdl:message name="crearSeguimientoRequest">
+		<wsdl:part name="parameter" element="tns:idPaquete" />
+	</wsdl:message>
+
+	<wsdl:message name="crearSeguimientoResponse">
+		<wsdl:part name="parameter" type="xs:string" />
+	</wsdl:message>
+
+	<wsdl:portType name="paquetePortType">
+
+		<wsdl:operation name="crearPaqueteOperation">
+			<wsdl:input message="tns:crearPaqueteRequest" />
+			<wsdl:output message="tns:crearPaqueteResponse" />
+		</wsdl:operation>
+
+		<wsdl:operation name="crearSequimientoOperation">
+			<wsdl:input message="tns:crearSeguimientoRequest" />
+			<wsdl:output message="tns:crearSeguimientoResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="rastreoBinding" type="tns:paquetePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+
+		<wsdl:operation name="seguimientoOperation">
+			<soap:operation soapAction="urn:#NewOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="actualizarRepartidorOperation">
+			<soap:operation soapAction="urn:#NewOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="RastreoService">
+		<wsdl:port name="RastreoPort" binding="tns:rastreoBinding">
+			<soap:address location="http://com.rastreo" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
