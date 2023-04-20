@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-	attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified"
+	attributeFormDefault="unqualified" xmlns:tns1="http://com.rastreo"
+	targetNamespace="http://com.rastreo">
 	<xs:element name="paquete">
 		<xs:complexType>
 			<xs:sequence>
@@ -26,11 +27,11 @@
 					</xs:simpleType>
 				</xs:element>
 				<xs:element name="descripcion" type="xs:string" />
-				<xs:element name="direccionEntrega" type="direccionEnvioType" />
+				<xs:element name="direccionEntrega" type="xs:string" />
 				<xs:element name="fechaEnvio" type="xs:date" />
 				<xs:element name="dimensiones" type="xs:decimal" />
 				<xs:element name="peso" type="xs:decimal" />
-				<xs:element name="estado" type="estadoType" />
+				<xs:element name="estado" type="xs:string" />
 				<!-- <xs:element name="guiaSeguimiento" type="xs:string" />
 				<xs:element name="costoEnvio" type="xs:decimal" />
 				<xs:element name="metodoEnvio" type="xs:string" /> -->

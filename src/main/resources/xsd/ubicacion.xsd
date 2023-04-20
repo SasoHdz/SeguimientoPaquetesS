@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:tns1="http://com.envio" targetNamespace="http://com.envio" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:tns1="http://com.rastreo"
+	targetNamespace="http://com.rastreo" attributeFormDefault="unqualified">
 	<xs:element name="ubicacion">
 		<xs:complexType>
 			<xs:sequence>

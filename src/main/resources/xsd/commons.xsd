@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://com.taller" targetNamespace="http://com.taller" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://com.rastreo"
+	targetNamespace="http://com.rastreo" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="ack">
 		<xs:annotation>
 			<xs:documentation>Describe la estructuras comunes para la gestión del seguimiento de paquetes.</xs:documentation>
