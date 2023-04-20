@@ -1,50 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  elementFormDefault="qualified"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
 	attributeFormDefault="unqualified" xmlns:tns1="http://com.rastreo"
-	targetNamespace="http://com.rastreo">
+	targetNamespace="http://com.rastreo" xmlns:com="http://com.rastreo">
 	<xs:element name="paquete">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="idPaquete">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="[0-9]+" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="idRemitente">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="[0-9]+" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="idDestinatario">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="[0-9]+" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
+				<xs:element name="idPaquete" type="xs:string" minOccurs="0"/>
+				<xs:element name="idRemitente" type="xs:string" minOccurs="0" />					
+				<xs:element name="idDestinatario" type="xs:string" minOccurs="0" />
 				<xs:element name="descripcion" type="xs:string" />
 				<xs:element name="direccionEntrega" type="xs:string" />
-				<xs:element name="fechaEnvio" type="xs:date" />
-				<xs:element name="dimensiones" type="xs:decimal" />
-				<xs:element name="peso" type="xs:decimal" />
-				<xs:element name="estado" type="xs:string" />
+				<xs:element name="fechaEnvio" type="xs:date" minOccurs="0" />
+				<xs:element name="dimensiones" type="xs:decimal" minOccurs="0" />
+				<xs:element name="peso" type="xs:decimal" minOccurs="0"/>
+				<xs:element name="estado" type="xs:string" minOccurs="0"/>
 				<!-- <xs:element name="guiaSeguimiento" type="xs:string" />
 				<xs:element name="costoEnvio" type="xs:decimal" />
 				<xs:element name="metodoEnvio" type="xs:string" /> -->
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<xs:element name="idPaquete">
-		<xs:simpleType>
-			<xs:restriction base="xs:string">
-				<xs:pattern value="[A-Z]{2}[0-9]{9}[A-Z]{2}" />
-			</xs:restriction>
-		</xs:simpleType>
-	</xs:element>
+	<xs:element name="idPaquete" type="xs:string" />
 	<xs:complexType name="direccionEnvioType">
 		<xs:sequence>
 			<xs:element name="calle" type="xs:string" />
@@ -65,7 +41,7 @@
 			<xs:element name="pais" type="xs:string" />
 		</xs:sequence>
 	</xs:complexType>
- 
+
 	<xs:complexType name="estadoType">
 		<xs:sequence>
 			<xs:element name="descripcion" type="xs:string" />

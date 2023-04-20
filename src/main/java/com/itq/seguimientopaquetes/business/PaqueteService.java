@@ -9,6 +9,8 @@ import com.itq.seguimientopaquetes.dto.Paquete;
 public class PaqueteService {
     public Ack insertarPaquete(Paquete pac) {
 		Ack ack = new Ack();
+		System.out.println("Paquete Recibido: '" + pac.getDescripcion() + "'");
+
 		ack.setDescription("dsdasd");
 		
 		ack.setCode(0);
