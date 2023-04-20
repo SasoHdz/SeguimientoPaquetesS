@@ -10,8 +10,7 @@
 	<wsdl:types>
 		<xs:schema targetNamespace="http://com.rastreo" elementFormDefault="qualified">
 			<xs:include schemaLocation="paquete.xsd" />
-			<xs:include schemaLocation="repartidor.xsd" />
-			<xs:include schemaLocation="cliente.xsd" />
+			<xs:include schemaLocation="common.xsd" />
 		</xs:schema>
 	</wsdl:types>
 
@@ -29,7 +28,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="actualizacionRepartidorResponse">
-		<wsdl:part name="parameter" type="xs:string" /> <!-- Cambiar por un ack -->
+		<wsdl:part name="parameter" type="xs:ack" /> <!-- Cambiar por un ack -->
 	</wsdl:message>
 
 	<wsdl:portType name="paquetePortType">

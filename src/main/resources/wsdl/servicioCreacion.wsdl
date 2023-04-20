@@ -11,8 +11,7 @@
 	<wsdl:types>
 		<xs:schema targetNamespace="http://com.rastreo" elementFormDefault="qualified">
 			<xs:include schemaLocation="paquete.xsd" />
-			<xs:include schemaLocation="repartidor.xsd" />
-			<xs:include schemaLocation="cliente.xsd" />
+			<xs:include schemaLocation="commons.xsd" />
 			<!-- Usuarios -->
 		</xs:schema>
 	</wsdl:types>
@@ -22,7 +21,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="crearPaqueteResponse">
-		<wsdl:part name="parameter" type="xs:string" />
+		<wsdl:part name="parameter" type="xs:ack" />
 	</wsdl:message>
 
 	<wsdl:message name="crearSeguimientoRequest">
@@ -30,7 +29,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="crearSeguimientoResponse">
-		<wsdl:part name="parameter" type="xs:string" />
+		<wsdl:part name="parameter" type="xs:ack" />
 	</wsdl:message>
 
 	<wsdl:portType name="paquetePortType">

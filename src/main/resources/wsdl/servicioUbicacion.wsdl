@@ -9,9 +9,8 @@
 	targetNamespace="http://com.rastreo">
 	<wsdl:types>
 		<xs:schema targetNamespace="http://com.rastreo" elementFormDefault="qualified">
-			<xs:include schemaLocation="paquete.xsd" />
-			<xs:include schemaLocation="repartidor.xsd" />
-			<xs:include schemaLocation="cliente.xsd" />
+			<xs:include schemaLocation="common.xsd" />
+			<xs:include schemaLocation="ubicacion.xsd" />
 		</xs:schema>
 	</wsdl:types>
 
