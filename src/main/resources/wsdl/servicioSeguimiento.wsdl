@@ -48,7 +48,7 @@
 	<wsdl:binding name="rastreoBinding" type="tns:paquetePortType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
 
-		<wsdl:operation name="seguimientoOperation">
+		<wsdl:operation name="getUbicacion">
 			<soap:operation soapAction="urn:#NewOperation" />
 			<wsdl:input>
 				<soap:body use="literal" />
@@ -57,7 +57,7 @@
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="actualizarRepartidorOperation">
+		<wsdl:operation name="cambiarEstadoPaquete">
 			<soap:operation soapAction="urn:#NewOperation" />
 			<wsdl:input>
 				<soap:body use="literal" />
