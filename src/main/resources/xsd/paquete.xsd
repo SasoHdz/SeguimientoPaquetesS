@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-	attributeFormDefault="unqualified" xmlns:tns1="http://com.rastreo"
-	targetNamespace="http://com.rastreo" xmlns:com="http://com.rastreo">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns:tns1="http://com.rastreo" targetNamespace="http://com.rastreo"
+	xmlns:com="http://com.rastreo">
 	<xs:element name="paquete">
 		<xs:complexType>
 			<xs:sequence>
@@ -20,7 +20,12 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<xs:element name="idPaquete" type="xs:string" />
+	<xs:complexType name="idPaquete">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
 	<xs:complexType name="direccionEnvioType">
 		<xs:sequence>
 			<xs:element name="calle" type="xs:string" />

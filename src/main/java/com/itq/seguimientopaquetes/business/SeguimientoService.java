@@ -4,12 +4,13 @@ import org.springframework.stereotype.Component;
 
 import com.itq.seguimientopaquetes.dto.Ack;
 import com.itq.seguimientopaquetes.dto.EstadoType;
+import com.itq.seguimientopaquetes.dto.IdPaquete;
 
 @Component
 public class SeguimientoService {
-    public Ack seguimientoOperation(String idPaquete) {
+    public Ack seguimientoOperation(IdPaquete idPaquete) {
 		Ack ack = new Ack();
-		System.out.println("Paquete Recibido:"+idPaquete);
+		System.out.println("Paquete Recibido:"+idPaquete.getId());
 
 		ack.setDescription("Paquete recibido");
 		
@@ -23,6 +24,17 @@ public class SeguimientoService {
 		System.out.println("Estado Actualizado");
 
 		ack.setDescription("Estado Actualizado");
+		
+		ack.setCode(1);
+		
+		return ack;
+	}
+
+	public Ack crearSequimientoOperation(IdPaquete idPaquete) {
+		Ack ack = new Ack();
+		System.out.println("Creacion Seguimiento");
+
+		ack.setDescription("Creacion Seguimiento con idPaquete:"+idPaquete.getId());
 		
 		ack.setCode(1);
 		

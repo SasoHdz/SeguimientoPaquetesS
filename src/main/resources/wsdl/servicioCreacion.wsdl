@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Aqui va operaciones crearPaquete, Operation -->
+<!--Aqui va operaciones crearPaquete, crearSeguimiento -->
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
@@ -41,7 +41,7 @@
 
 		<wsdl:operation name="crearSequimientoOperation">
 			<wsdl:input message="tns:OperationRequest" />
-			<wsdl:output message="tns:crearSeguimientoResponse" />
+			<wsdl:output message="tns:OperationResponse" />
 		</wsdl:operation>
 	</wsdl:portType>
 

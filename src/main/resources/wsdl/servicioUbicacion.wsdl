@@ -19,7 +19,7 @@
 	</wsdl:message>
 
 	<wsdl:message name="creacionUbicacionResponse">
-		<wsdl:part name="parameters" type="tns:ack" />
+		<wsdl:part name="parameter" type="tns:ack" />
 	</wsdl:message>
 
 	<wsdl:portType name="paquetePortType">

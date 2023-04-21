@@ -21,7 +21,7 @@ public class UbicacionEndpoint {
     @ResponsePayload
 
     public Ack creacionUbicacionOperation(@RequestPayload Ubicacion request) {
-        System.out.println("Llegue a paquete registration");
+        System.out.println("Llego nueva ubicacion");
         Ack response = ubicacionService.creacionUbicacionOperation(request);
         return response;
     }

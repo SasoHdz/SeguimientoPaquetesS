@@ -9,9 +9,9 @@ import com.itq.seguimientopaquetes.dto.Ubicacion;
 public class UbicacionService {
     public Ack creacionUbicacionOperation(Ubicacion ubicacion) {
 		Ack ack = new Ack();
-		System.out.println("Ubicacion Creada");
+		System.out.println("Ubicacion Creada"+ubicacion.toString());
 
-		ack.setDescription("dsdasd");
+		ack.setDescription("Listo");
 		
 		ack.setCode(0);
 		

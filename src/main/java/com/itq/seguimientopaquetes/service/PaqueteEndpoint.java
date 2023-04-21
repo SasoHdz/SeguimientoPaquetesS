@@ -20,7 +20,7 @@ public class PaqueteEndpoint {
 	@ResponsePayload
 
     public Ack insertarPaquete(@RequestPayload Paquete request){
-        System.out.println("Llegue a paquete registration");
+        System.out.println("OperacionInsertarPaquete:");
         Ack response = paqueteService.insertarPaquete(request);
         return response;
     }
