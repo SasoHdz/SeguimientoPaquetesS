@@ -15,11 +15,11 @@
 	</wsdl:types>
 
 	<wsdl:message name="creacionUbicacionRequest">
-		<wsdl:part name="parameter" type="tns:direccionEnvio" />
+		<wsdl:part name="parameter" type="xs:ubicacion" />
 	</wsdl:message>
 
 	<wsdl:message name="creacionUbicacionResponse">
-		<wsdl:part name="parameters" type="xs:string" />
+		<wsdl:part name="parameters" type="xs:ack" />
 	</wsdl:message>
 
 	<wsdl:portType name="paquetePortType">
