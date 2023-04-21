@@ -22,13 +22,13 @@
 		<wsdl:part name="parameter" type="tns:estadoType" />
 	</wsdl:message>
 
-	<wsdl:message name="actualizacionRepartidorRequest">
-		<wsdl:part name="paquete" element="tns:estadoType" />
+	<wsdl:message name="actualizarPaqueteRequest">
+		<wsdl:part name="parameter" element="tns:estadoType" />
 		<!-- <wsdl:part name="estado" type="tns:estado" /> -->
 	</wsdl:message>
 
-	<wsdl:message name="actualizacionRepartidorResponse">
-		<wsdl:part name="parameter" type="xs:ack" /> <!-- Cambiar por un ack -->
+	<wsdl:message name="actualizarPaqueteResponse">
+		<wsdl:part name="parameter" type="tns:ack" /> <!-- Cambiar por un ack -->
 	</wsdl:message>
 
 	<wsdl:portType name="paquetePortType">
@@ -38,7 +38,7 @@
 			<wsdl:output message="tns:seguimientoResponse" />
 		</wsdl:operation>
 
-		<wsdl:operation name="actualizarRepartidorOperation">
+		<wsdl:operation name="actualizarPaqueteOperation">
 			<wsdl:input message="tns:actualizacionRepartidorRequest" />
 			<wsdl:output message="tns:actualizacionRepartidorResponse" />
 		</wsdl:operation>
@@ -48,7 +48,7 @@
 	<wsdl:binding name="seguimientoBinding" type="tns:paquetePortType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
 
-		<wsdl:operation name="getUbicacion">
+		<wsdl:operation name="seguimientoOperation">
 			<soap:operation soapAction="urn:#NewOperation" />
 			<wsdl:input>
 				<soap:body use="literal" />
@@ -57,7 +57,7 @@
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="cambiarEstadoPaquete">
+		<wsdl:operation name="actualizarPaqueteOperation">
 			<soap:operation soapAction="urn:#NewOperation" />
 			<wsdl:input>
 				<soap:body use="literal" />

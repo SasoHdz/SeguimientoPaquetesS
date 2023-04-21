@@ -41,7 +41,6 @@
 			<xs:element name="pais" type="xs:string" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<xs:complexType name="estadoType">
 		<xs:sequence>
 			<xs:element name="descripcion" type="xs:string" />
