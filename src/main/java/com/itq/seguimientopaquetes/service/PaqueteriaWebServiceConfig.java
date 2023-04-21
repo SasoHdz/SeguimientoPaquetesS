@@ -33,20 +33,6 @@ public class PaqueteriaWebServiceConfig extends WsConfigurerAdapter {
         return wsdl11Definition;
     }
 
-    @Bean(name = "servicioSeguimiento")
-    public Wsdl11Definition servicioSeguimientoWsdl() {
-        SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
-        wsdl11Definition.setWsdl(new ClassPathResource("wsdl/servicioSeguimiento.wsdl"));
-        return wsdl11Definition;
-    }
-
-    @Bean(name = "servicioUbicacion")
-    public Wsdl11Definition servicioUbicacionWsdl() {
-        SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
-        wsdl11Definition.setWsdl(new ClassPathResource("wsdl/servicioUbicacion.wsdl"));
-        return wsdl11Definition;
-    }
-
     @Bean(name = "cliente")
     public XsdSchema clienteSchema() {
         return new SimpleXsdSchema(new ClassPathResource("xsd/cliente.xsd"));
