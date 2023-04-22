@@ -9,6 +9,7 @@ import com.itq.seguimientopaquetes.entity.paqueteRepository;
 import com.itq.seguimientopaquetes.entity.registroPaqueteRepository;
 import com.itq.seguimientopaquetes.entity.ubicacionRepository;
 import com.itq.seguimientopaquetes.entity.usuarioRepository;
+
 @Component
 public class SeguimientoService {
     public Ack seguimientoOperation(IdPaquete idPaquete) {
