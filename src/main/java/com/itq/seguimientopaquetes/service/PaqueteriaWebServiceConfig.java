@@ -26,20 +26,6 @@ public class PaqueteriaWebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
 
-    @Bean(name = "servicioCreacion")
-    public Wsdl11Definition servicioCreacionWsdl() {
-        SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
-        wsdl11Definition.setWsdl(new ClassPathResource("wsdl/servicioCreacion.wsdl"));
-        return wsdl11Definition;
-    }
-
-    @Bean(name = "servicioSeguimiento")
-    public Wsdl11Definition servicioSeguimientoWsdl() {
-        SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();
-        wsdl11Definition.setWsdl(new ClassPathResource("wsdl/servicioSeguimiento.wsdl"));
-        return wsdl11Definition;
-    }
-
     @Bean(name = "servicioUbicacion")
     public Wsdl11Definition servicioUbicacionWsdl() {
         SimpleWsdl11Definition wsdl11Definition = new SimpleWsdl11Definition();

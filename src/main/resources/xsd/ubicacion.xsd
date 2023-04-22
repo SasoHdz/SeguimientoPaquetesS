@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
 	xmlns:tns1="http://com.rastreo" targetNamespace="http://com.rastreo"
-	xmlns:com="http://com.rastreo" attributeFormDefault="unqualified">
+	xmlns:com="http://com.rastreo">
 	<xs:element name="ubicacion">
 		<xs:complexType>
 			<xs:sequence>
