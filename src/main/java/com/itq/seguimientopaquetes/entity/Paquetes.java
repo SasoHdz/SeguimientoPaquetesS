@@ -36,15 +36,12 @@ public class Paquetes {
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_USUARIO_REMITENTE")
-    private Usuario remitente;
+    private Integer remitente;
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_USUARIO_DESTINATARIO")
-    private Usuario destinatario;
+    private Integer destinatario;
     
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_UBICACION")
-    private Ubicaciones ubicacion;
     
     //@OneToMany(mappedBy = "paquete")
     //private List<RegistroPaquete> registroPaquetes;
@@ -54,7 +51,7 @@ public class Paquetes {
     }
 
     // constructor con parámetros
-    public Paquetes(String descripcion, Float peso, String dimensiones, String direccionEntrega, Date fechaCreacion, String estado, Usuario remitente, Usuario destinatario, Ubicaciones ubicacion) {
+    public Paquetes(String descripcion, Float peso, String dimensiones, String direccionEntrega, Date fechaCreacion, String estado, Integer remitente, Integer destinatario) {
         this.descripcion = descripcion;
         this.peso = peso;
         this.dimensiones = dimensiones;
@@ -63,7 +60,6 @@ public class Paquetes {
         this.estado = estado;
         this.remitente = remitente;
         this.destinatario = destinatario;
-        this.ubicacion = ubicacion;
     }
     
     // getters y setters
@@ -123,28 +119,20 @@ public class Paquetes {
         this.estado = estado;
     }
 
-    public Usuario getRemitente() {
+    public Integer getRemitente() {
         return remitente;
     }
 
-    public void setRemitente(Usuario remitente) {
+    public void setRemitente(Integer remitente) {
         this.remitente = remitente;
     }
 
-    public Usuario getDestinatario() {
+    public Integer getDestinatario() {
         return destinatario;
     }
 
-    public void setDestinatario(Usuario destinatario) {
+    public void setDestinatario(Integer destinatario) {
         this.destinatario = destinatario;
-    }
-
-    public Ubicaciones getUbicacion() {
-        return ubicacion;
-    }
-
-    public void setUbicacion(Ubicaciones ubicacion) {
-        this.ubicacion = ubicacion;
     }
 
 }

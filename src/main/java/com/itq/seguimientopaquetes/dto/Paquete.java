@@ -88,7 +88,7 @@ public class Paquete {
     @XmlElement(required = true)
     protected String dimensiones;
     @XmlElement(required = true)
-    protected BigDecimal peso;
+    protected Float peso;
     @XmlElement(required = true)
     protected String estado;
 
@@ -268,7 +268,7 @@ public class Paquete {
      *     {@link BigDecimal }
      *     
      */
-    public BigDecimal getPeso() {
+    public Float getPeso() {
         return peso;
     }
 
@@ -280,7 +280,7 @@ public class Paquete {
      *     {@link BigDecimal }
      *     
      */
-    public void setPeso(BigDecimal value) {
+    public void setPeso(Float value) {
         this.peso = value;
     }
 
