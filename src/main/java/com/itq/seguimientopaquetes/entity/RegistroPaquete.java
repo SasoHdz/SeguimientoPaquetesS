@@ -25,11 +25,11 @@ public class RegistroPaquete {
 
 	@ManyToOne
 	@JoinColumn(name = "idPaquete")
-	private Paquete paquete;
+	private Paquetes paquete;
 
 	@ManyToOne
 	@JoinColumn(name = "idUbicacion")
-	private Ubicacion ubicacionPaquete;
+	private Ubicaciones ubicacionPaquete;
 
 	public Integer getIdRegistro() {
 		return idRegistro;
@@ -71,19 +71,19 @@ public class RegistroPaquete {
 		this.repartidor = repartidor;
 	}
 
-	public Paquete getPaquete() {
+	public Paquetes getPaquete() {
 		return paquete;
 	}
 
-	public void setPaquete(Paquete paquete) {
+	public void setPaquete(Paquetes paquete) {
 		this.paquete = paquete;
 	}
 
-	public Ubicacion getUbicacionPaquete() {
+	public Ubicaciones getUbicacionPaquete() {
 		return ubicacionPaquete;
 	}
 
-	public void setUbicacionPaquete(Ubicacion ubicacionPaquete) {
+	public void setUbicacionPaquete(Ubicaciones ubicacionPaquete) {
 		this.ubicacionPaquete = ubicacionPaquete;
 	}
 

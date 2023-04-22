@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "PAQUETES")
-public class Paquete {
+public class Paquetes {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,17 +44,17 @@ public class Paquete {
     
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_UBICACION")
-    private Ubicacion ubicacion;
+    private Ubicaciones ubicacion;
     
     //@OneToMany(mappedBy = "paquete")
     //private List<RegistroPaquete> registroPaquetes;
 
     // constructor vacío
-    public Paquete() {
+    public Paquetes() {
     }
 
     // constructor con parámetros
-    public Paquete(String descripcion, Float peso, String dimensiones, String direccionEntrega, Date fechaCreacion, String estado, Usuario remitente, Usuario destinatario, Ubicacion ubicacion) {
+    public Paquetes(String descripcion, Float peso, String dimensiones, String direccionEntrega, Date fechaCreacion, String estado, Usuario remitente, Usuario destinatario, Ubicaciones ubicacion) {
         this.descripcion = descripcion;
         this.peso = peso;
         this.dimensiones = dimensiones;
@@ -139,11 +139,11 @@ public class Paquete {
         this.destinatario = destinatario;
     }
 
-    public Ubicacion getUbicacion() {
+    public Ubicaciones getUbicacion() {
         return ubicacion;
     }
 
-    public void setUbicacion(Ubicacion ubicacion) {
+    public void setUbicacion(Ubicaciones ubicacion) {
         this.ubicacion = ubicacion;
     }
 

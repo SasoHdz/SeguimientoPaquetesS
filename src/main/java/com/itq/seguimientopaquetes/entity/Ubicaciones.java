@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "UBICACIONES_PAQUETE")
-public class Ubicacion {
+public class Ubicaciones {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,12 +13,12 @@ public class Ubicacion {
 
     @ManyToOne
     @JoinColumn(name = "ID_PAQUETE")
-    private Paquete paquete;
+    private Paquetes paquete;
 
     // Constructor vacío necesario para JPA
-    public Ubicacion() {}
+    public Ubicaciones() {}
 
-    public Ubicacion(Paquete paquete) {
+    public Ubicaciones(Paquetes paquete) {
         this.paquete = paquete;
     }
 
@@ -30,11 +30,11 @@ public class Ubicacion {
         this.id = id;
     }
 
-    public Paquete getPaquete() {
+    public Paquetes getPaquete() {
         return paquete;
     }
 
-    public void setPaquete(Paquete paquete) {
+    public void setPaquete(Paquetes paquete) {
         this.paquete = paquete;
     }
 }
