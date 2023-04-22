@@ -39,10 +39,4 @@ public class PaqueteService {
 		return ack;
 	}
 
-	public Ack llegoId(String idPaquete){
-		Ack ack = new Ack();
-		System.out.println("idPaquete Recibida");
-		
-		return ack;
-	}
 }

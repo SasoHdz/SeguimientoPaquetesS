@@ -3,7 +3,6 @@ package com.itq.seguimientopaquetes.business;
 import org.springframework.stereotype.Component;
 
 import com.itq.seguimientopaquetes.dto.Ack;
-import com.itq.seguimientopaquetes.dto.EstadoType;
 import com.itq.seguimientopaquetes.dto.IdPaquete;
 import com.itq.seguimientopaquetes.entity.paqueteRepository;
 import com.itq.seguimientopaquetes.entity.registroPaqueteRepository;
@@ -23,16 +22,6 @@ public class SeguimientoService {
 		return ack;
 	}
 
-	public Ack actualizarPaqueteOperation(EstadoType estadoType) {
-		Ack ack = new Ack();
-		System.out.println("Estado Actualizado");
-
-		ack.setDescription("Estado Actualizado");
-		
-		ack.setCode(1);
-		
-		return ack;
-	}
 
 	public Ack crearSequimientoOperation(IdPaquete idPaquete) {
 		Ack ack = new Ack();
