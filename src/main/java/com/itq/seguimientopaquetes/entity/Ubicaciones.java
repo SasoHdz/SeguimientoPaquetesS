@@ -3,38 +3,59 @@ package com.itq.seguimientopaquetes.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "UBICACIONES_PAQUETE")
+@Table(name = "UBICACIONES")
 public class Ubicaciones {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_UBICACION")
-    private Integer id;
+    private Integer idUbicacion;
 
-    @ManyToOne
-    @JoinColumn(name = "ID_PAQUETE")
-    private Paquetes paquete;
+    @Column(name = "LATITUD")
+    private String latitud;
+    
+    @Column(name = "LONGITUD")
+    private String longitud;
+
+    @Column(name = "DESCRIPCION")
+    private String descripcion;
+    
+    
 
     // Constructor vacío necesario para JPA
     public Ubicaciones() {}
 
-    public Ubicaciones(Paquetes paquete) {
-        this.paquete = paquete;
+    public Ubicaciones(String latitud, String longitud, String descripcion){
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.descripcion = descripcion;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getIdUbicacion() {
+        return idUbicacion;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public String getLatitud() {
+        return latitud;
     }
 
-    public Paquetes getPaquete() {
-        return paquete;
+    public String getLongitud() {
+        return longitud;
     }
 
-    public void setPaquete(Paquetes paquete) {
-        this.paquete = paquete;
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public void setLatitud(String latitud) {
+        this.latitud = latitud;
+    }
+
+    public void setLongitud(String longitud) {
+        this.longitud = longitud;
     }
 }

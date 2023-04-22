@@ -10,8 +10,7 @@
 				</xs:element>
 				<xs:element name="longitud" type="xs:string">
 				</xs:element>
-				<xs:element name="fechaHora" type="xs:date" />
-				<xs:element name="idPaquete" type="xs:string" />
+				<xs:element name="descripcion" type="xs:string" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
