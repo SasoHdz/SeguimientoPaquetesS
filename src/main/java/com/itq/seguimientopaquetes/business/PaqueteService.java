@@ -1,6 +1,6 @@
 package com.itq.seguimientopaquetes.business;
 
-	import java.sql.Date;
+import java.sql.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
