@@ -15,7 +15,7 @@
 	</wsdl:types>
 
 	<wsdl:message name="creacionUbicacionRequest">
-		<wsdl:part name="parameter" type="tns:ubicacion" />
+		<wsdl:part name="parameter" element="tns:ubicacion" />
 	</wsdl:message>
 
 	<wsdl:message name="creacionUbicacionResponse">
