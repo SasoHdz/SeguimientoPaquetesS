@@ -2,59 +2,56 @@ package com.itq.seguimientopaquetes.entity;
 
 import java.sql.Date;
 //import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.*;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "PAQUETES")
 public class Paquetes {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_PAQUETE")
     private Integer idPaquete;
-    
+
     @Column(name = "DESCRIPCION")
     private String descripcion;
-    
+
     @Column(name = "PESO")
     private Float peso;
-    
+
     @Column(name = "DIMENSIONES")
     private String dimensiones;
-    
+
     @Column(name = "DIRECCION_ENTREGA")
     private String direccionEntrega;
-    
+
     @Column(name = "FECHA_CREACION")
     private Date fechaCreacion;
-    
+
     @Column(name = "ESTADO")
     private String estado;
-    
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_USUARIO_REMITENTE")
+    @JoinColumn(name = "ID_USUARIO_REMITENTE", referencedColumnName = "ID_USUARIO")
     private Usuario remitente;
-    
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_USUARIO_DESTINATARIO")
+    @JoinColumn(name = "ID_USUARIO_DESTINATARIO", referencedColumnName = "ID_USUARIO")
     private Usuario destinatario;
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_UBICACION")
-    private Ubicaciones ubicacion;
-    
-    //@OneToMany(mappedBy = "paquete")
-    //private List<RegistroPaquete> registroPaquetes;
+
+    // @OneToMany(mappedBy = "paquete")
+    // private List<RegistroPaquete> registroPaquetes;
 
     // constructor vacío
     public Paquetes() {
     }
 
     // constructor con parámetros
-    public Paquetes(String descripcion, Float peso, String dimensiones, String direccionEntrega, Date fechaCreacion, String estado, Usuario remitente, Usuario destinatario, Ubicaciones ubicacion) {
+    public Paquetes(String descripcion, Float peso, String dimensiones, String direccionEntrega, Date fechaCreacion,
+            String estado, Usuario remitente, Usuario destinatario) {
         this.descripcion = descripcion;
         this.peso = peso;
         this.dimensiones = dimensiones;
@@ -63,9 +60,12 @@ public class Paquetes {
         this.estado = estado;
         this.remitente = remitente;
         this.destinatario = destinatario;
-        this.ubicacion = ubicacion;
     }
-    
+
+    public Paquetes(String descripcion2, Float peso2, String dimensiones2, String direccionEntrega2, Date fechaHoy,
+            String estado2, Optional<Usuario> remitente2, Optional<Usuario> destinatario2) {
+    }
+
     // getters y setters
     public Integer getIdPaquete() {
         return idPaquete;
@@ -137,14 +137,6 @@ public class Paquetes {
 
     public void setDestinatario(Usuario destinatario) {
         this.destinatario = destinatario;
-    }
-
-    public Ubicaciones getUbicacion() {
-        return ubicacion;
-    }
-
-    public void setUbicacion(Ubicaciones ubicacion) {
-        this.ubicacion = ubicacion;
     }
 
 }

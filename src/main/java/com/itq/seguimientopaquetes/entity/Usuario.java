@@ -16,6 +16,12 @@ public class Usuario {
     @Column(name = "NOMBRE", nullable = false)
     private String nombre;
 
+    @Column(name = "A_PATERNO", nullable = false)
+    private String a_paterno;
+
+    @Column(name = "A_MATERNO", nullable = false)
+    private String a_materno;
+
     @Column(name = "DIRECCION", nullable = false)
     private String direccion;
 
@@ -36,13 +42,31 @@ public class Usuario {
     }
 
     // Constructor con parámetros
-    public Usuario(String nombre, String direccion, String telefono, String email, String password, Date fechaNacimiento) {
+    public Usuario(String nombre,String a_paterno,String a_materno, String direccion, String telefono, String email, String password, Date fechaNacimiento) {
         this.nombre = nombre;
+        this.a_paterno = a_paterno;
+        this.a_materno = a_materno;
         this.direccion = direccion;
         this.telefono = telefono;
         this.email = email;
         this.password = password;
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Usuario(Integer idUsuario, String nombre,String a_paterno,String a_materno, String direccion, String telefono, String email, String password, Date fechaNacimiento) {
+        this.idUsuario = idUsuario;
+        this.nombre = nombre;
+        this.a_paterno = a_paterno;
+        this.a_materno = a_materno;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.email = email;
+        this.password = password;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Usuario(Integer idUsuario){
+        this.idUsuario = idUsuario;
     }
 
     // Getters y setters

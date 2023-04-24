@@ -13,9 +13,8 @@ public class UbicacionService {
 	private ubicacionRepository ubicacionRepository;
 
 	public Ack creacionUbicacionOperation(Ubicacion ubicacion) {
-		ubicacionRepository
-				.save(new Ubicaciones(ubicacion.getLatitud(), ubicacion.getLongitud(), ubicacion.getDescripcion()));
-
+		Ubicaciones newUbicacion = new Ubicaciones(ubicacion.getLatitud(), ubicacion.getLongitud(), ubicacion.getDescripcion());
+		ubicacionRepository.save(newUbicacion);
 		Ack ack = new Ack();
 		System.out.println("Ubicacion:" + ubicacion.getDescripcion() + "creada con exito");
 

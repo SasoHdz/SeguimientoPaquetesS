@@ -10,7 +10,7 @@ public class RegistroPaquete {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID_PAQUETE")
+	@Column(name = "ID_REGISTRO")
     private Integer idRegistro;
 
 	private Date fechaHoraCambio;
@@ -20,15 +20,15 @@ public class RegistroPaquete {
 	private String estadoNuevo;
 
 	@ManyToOne
-	@JoinColumn(name = "idRepartidor")
+	@JoinColumn(name = "ID_REPARTIDOR",referencedColumnName = "ID_REPARTIDOR")
 	private Repartidor repartidor;
 
 	@ManyToOne
-	@JoinColumn(name = "idPaquete")
+	@JoinColumn(name = "ID_PAQUETE", referencedColumnName = "ID_PAQUETE")
 	private Paquetes paquete;
 
 	@ManyToOne
-	@JoinColumn(name = "idUbicacion")
+	@JoinColumn(name = "ID_UBICACION", referencedColumnName = "ID_UBICACION")
 	private Ubicaciones ubicacionPaquete;
 
 	public Integer getIdRegistro() {

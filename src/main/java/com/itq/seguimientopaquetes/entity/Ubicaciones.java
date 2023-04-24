@@ -11,44 +11,30 @@ public class Ubicaciones {
     @Column(name = "ID_UBICACION")
     private Integer idUbicacion;
 
-    @Column(name = "LATITUD")
+    @Column(name = "LATITUD", nullable = false)
     private String latitud;
-    
-    @Column(name = "LONGITUD")
+
+    @Column(name = "LONGITUD", nullable = false)
     private String longitud;
 
-    @Column(name = "DESCRIPCION")
-    private String descripcion;
-    
-    
+    @Column(name = "DESCRIPCION", nullable = false)
+    private String  descripcion;
 
     // Constructor vacío necesario para JPA
     public Ubicaciones() {}
 
-    public Ubicaciones(String latitud, String longitud, String descripcion){
+    public Ubicaciones(String latitud, String longitud, String description) {
         this.latitud = latitud;
         this.longitud = longitud;
-        this.descripcion = descripcion;
+        this.descripcion = description;
     }
 
-    public Integer getIdUbicacion() {
+    public Integer getId() {
         return idUbicacion;
     }
 
-    public String getLatitud() {
-        return latitud;
-    }
-
-    public String getLongitud() {
-        return longitud;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setId(Integer id) {
+        this.idUbicacion = id;
     }
 
     public void setLatitud(String latitud) {
@@ -57,5 +43,21 @@ public class Ubicaciones {
 
     public void setLongitud(String longitud) {
         this.longitud = longitud;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getLongitud() {
+        return longitud;
+    }
+
+    public String getLatitud() {
+        return latitud;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
     }
 }
