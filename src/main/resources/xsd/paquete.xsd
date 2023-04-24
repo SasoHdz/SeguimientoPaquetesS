@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
 	xmlns:tns1="http://com.rastreo" targetNamespace="http://com.rastreo"
 	xmlns:com="http://com.rastreo">
 	<xs:element name="paquete">
@@ -8,18 +9,18 @@
 				<xs:element name="idPaquete" type="xs:string">
 				</xs:element>
 				<xs:element name="idRemitente">
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:pattern value="[0-9]+" />
-					</xs:restriction>
-				</xs:simpleType>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[0-9]+" />
+						</xs:restriction>
+					</xs:simpleType>
 				</xs:element>
 				<xs:element name="idDestinatario">
 					<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:pattern value="[0-9]+" />
-					</xs:restriction>
-				</xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[0-9]+" />
+						</xs:restriction>
+					</xs:simpleType>
 				</xs:element>
 				<xs:element name="descripcion" type="xs:string" />
 				<xs:element name="direccionEntrega" type="xs:string" />
@@ -66,5 +67,12 @@
 			<xs:element name="fechaEstimadaEntrega" type="xs:date" />
 		</xs:sequence>
 	</xs:complexType>
+	<xs:element name="ReporteDiarioResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="paquete" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 
 </xs:schema>

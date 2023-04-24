@@ -24,12 +24,12 @@
 		<wsdl:part name="parameter" type="tns:ack" />
 	</wsdl:message>
 
-	<wsdl:message name="OperationRequest">
-		<wsdl:part name="parameter" element="tns:idPaquete" />
+	<wsdl:message name="reporteDiarioPaquetesRequest">
+		<wsdl:part name="parameter" />
 	</wsdl:message>
 
-	<wsdl:message name="OperationResponse">
-		<wsdl:part name="parameter" type="tns:ack" />
+	<wsdl:message name="reporteDiarioPaquetesResponse">
+		<wsdl:part name="parameter" element="tns:ReporteDiarioResponse" />
 	</wsdl:message>
 
 	<wsdl:portType name="paquetePortType">
@@ -39,9 +39,9 @@
 			<wsdl:output message="tns:crearPaqueteResponse" />
 		</wsdl:operation>
 
-		<wsdl:operation name="crearSequimientoOperation">
-			<wsdl:input message="tns:OperationRequest" />
-			<wsdl:output message="tns:OperationResponse" />
+		<wsdl:operation name="reporteDiarioPaquetes">
+			<wsdl:input message="tns:reporteDiarioPaquetesRequest" />
+			<wsdl:output message="tns:reporteDiarioPaquetesResponse" />
 		</wsdl:operation>
 	</wsdl:portType>
 
@@ -57,7 +57,7 @@
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="crearSequimientoOperation">
+		<wsdl:operation name="reporteDiarioPaquetes">
 			<soap:operation soapAction="urn:#NewOperation" />
 			<wsdl:input>
 				<soap:body use="literal" />
