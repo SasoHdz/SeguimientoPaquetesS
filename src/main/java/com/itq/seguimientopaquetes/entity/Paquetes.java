@@ -2,6 +2,7 @@ package com.itq.seguimientopaquetes.entity;
 
 import java.sql.Date;
 //import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.*;
 import javax.persistence.Table;
@@ -59,6 +60,10 @@ public class Paquetes {
         this.estado = estado;
         this.remitente = remitente;
         this.destinatario = destinatario;
+    }
+
+    public Paquetes(String descripcion2, Float peso2, String dimensiones2, String direccionEntrega2, Date fechaHoy,
+            String estado2, Optional<Usuario> remitente2, Optional<Usuario> destinatario2) {
     }
 
     // getters y setters
