@@ -26,7 +26,7 @@
 				<xs:element name="direccionEntrega" type="xs:string" />
 				<xs:element name="fechaEnvio" type="xs:date" />
 				<xs:element name="dimensiones" type="xs:string"></xs:element>
-				<xs:element name="peso" type="xs:decimal" />
+				<xs:element name="peso" type="xs:float" />
 				<xs:element name="estado" type="xs:string" />
 				<!-- <xs:element name="guiaSeguimiento" type="xs:string" />
 				<xs:element name="costoEnvio" type="xs:decimal" />

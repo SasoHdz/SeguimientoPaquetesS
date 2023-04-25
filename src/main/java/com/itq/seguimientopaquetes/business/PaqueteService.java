@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import com.itq.seguimientopaquetes.dto.Ack;
 import com.itq.seguimientopaquetes.dto.Paquete;
-
 import com.itq.seguimientopaquetes.entity.Paquetes;
 import com.itq.seguimientopaquetes.entity.Usuario;
 import com.itq.seguimientopaquetes.entity.paqueteRepository;
@@ -38,6 +37,5 @@ public class PaqueteService {
 		
 		return ack;
 	}
-
 	
 }

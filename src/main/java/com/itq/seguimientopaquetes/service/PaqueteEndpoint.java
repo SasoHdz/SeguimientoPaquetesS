@@ -9,7 +9,7 @@ import com.itq.seguimientopaquetes.business.PaqueteService;
 import com.itq.seguimientopaquetes.dto.Ack;
 import com.itq.seguimientopaquetes.dto.Paquete;
 
-@Endpoint
+@Endpoint 
 public class PaqueteEndpoint {
 
 	@Autowired PaqueteService paqueteService;

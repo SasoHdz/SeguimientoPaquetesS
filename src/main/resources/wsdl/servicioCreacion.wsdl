@@ -25,11 +25,11 @@
 	</wsdl:message>
 
 	<wsdl:message name="reporteDiarioPaquetesRequest">
-		<wsdl:part name="parameter" />
+		<wsdl:part name="parameter" element="tns:ack"/>
 	</wsdl:message>
 
 	<wsdl:message name="reporteDiarioPaquetesResponse">
-		<wsdl:part name="parameter" element="tns:ReporteDiarioResponse" />
+		<wsdl:part name="parameter" element="tns:string" />
 	</wsdl:message>
 
 	<wsdl:portType name="paquetePortType">

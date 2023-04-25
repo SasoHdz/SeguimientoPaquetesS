@@ -82,7 +82,7 @@
 					<packageName>com.itq.seguimiento-paquetes.dto</packageName>
 					<clearOutputDir>true</clearOutputDir>
 				</configuration>
-			</plugin>  -->
+			</plugin> -->
 
 		</plugins>
 	</build>

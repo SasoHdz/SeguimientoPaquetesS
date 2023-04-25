@@ -127,6 +127,14 @@ public class Paquetes {
         return remitente;
     }
 
+    public Integer getIdRemitente(Usuario u) {
+        return u.getIdUsuario();
+    }
+
+    public Integer getIdDestinatario(Usuario u) {
+        return u.getIdUsuario();
+    }
+
     public void setRemitente(Usuario remitente) {
         this.remitente = remitente;
     }
@@ -137,6 +145,22 @@ public class Paquetes {
 
     public void setDestinatario(Usuario destinatario) {
         this.destinatario = destinatario;
+    }
+
+    @Override
+    public String toString() {
+        return "Paquete{" +
+                "idPaquete=" + idPaquete +
+                ", descripcion='" + descripcion + '\'' +
+                ", peso=" + peso +
+                ", dimensiones='" + dimensiones + '\'' +
+                ", direccionEntrega='" + direccionEntrega + '\'' +
+                ", fechaCreacion=" + fechaCreacion +
+                ", estado='" + estado + '\'' +
+                ", remitente=" + remitente + // Aquí debes agregar el método que retorna el nombre completo del usuario
+                ", destinatario=" + destinatario + // Aquí debes agregar el método que retorna el nombre completo del
+                                                   // usuario
+                '}';
     }
 
 }
